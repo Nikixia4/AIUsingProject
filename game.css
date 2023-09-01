@@ -1,0 +1,29 @@
+body{
+    width: 700px;
+    height: 800px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #000000;
+   
+
+
+}
+button {
+    position: relative;
+    left: 600px;
+    top: 30px;
+    display: block;
+    margin-bottom: 30px;
+    text-align: center; 
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    background-color: #74ff79;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #656464;
+  }
+  p{
+    position: relative;
+    top: 500px;
+   margin-bottom: 35px;
+  }

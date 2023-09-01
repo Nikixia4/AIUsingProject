@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音樂</title>
+
+   
+   <script>
+    var score = 0;
+    //物體按造規定順序掉落 
+    
+    function drop(){
+    
+        //分數歸零
+        score = 0;
+        document.getElementById("score").innerHTML = score;
+        //播放音樂
+        document.getElementById("music").play();
+
+            _drop("obj1");
+            setTimeout(function(){ _drop("obj3"); }, 1000);
+            setTimeout(function(){ _drop("obj2"); }, 2000);
+            setTimeout(function(){ _drop("obj4"); }, 3000);            
+            setTimeout(function(){ _drop("obj2"); }, 4000); 
+            setTimeout(function(){ _drop("obj3"); }, 5000);
+            setTimeout(function(){ _drop("obj1"); }, 6000);
+            setTimeout(function(){ _drop("obj3"); }, 7000);
+            setTimeout(function(){ _drop("obj3"); }, 8000);
+            setTimeout(function(){ _drop("obj2"); }, 9000);
+            setTimeout(function(){ _drop("obj3"); }, 10000);
+            setTimeout(function(){ _drop("obj4"); }, 11000);
+            setTimeout(function(){ _drop("obj1"); }, 12000);
+            setTimeout(function(){ _drop("obj2"); }, 13000);
+            setTimeout(function(){ _drop("obj3"); }, 14000);
+            setTimeout(function(){ _drop("obj4"); }, 15000);
+            setTimeout(function(){ _drop("obj1"); }, 16000);
+            setTimeout(function(){ _drop("obj2"); }, 17000);
+            setTimeout(function(){ _drop("obj3"); }, 18000);
+           
+            //如果funtion stop()被執行，則停止fumction drop()的執行
+            
+        }
+        function stop(){
+            location.reload();
+            // document.getElementById("music").pause();
+            //終止fumction drop()的執行
+        }
+        //物體掉落的動畫    
+        function _drop(oo) {
+            let top = 8;
+            let obj = document.getElementById(oo);
+            obj.style.top = "8px";
+            obj.style.display = "block";
+            let timer1 = setInterval(function () {
+                top += 10;
+                obj.style.top = top + "px";
+                if (top >= 530) {
+                    clearInterval(timer1);
+                    obj.style.display = "none";
+                
+                }
+            }, 20);
+        }
+        //當物體位置掉錄到黑線時，按d鍵，分數+1
+
+        document.onkeydown = function(e){
+            if(e.keyCode == 68 && document.getElementById("obj1").style.top >= "450px" && document.getElementById("obj1").style.top < "520px"){
+                score += 1;
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("obj1").style.display = "none";
+            }
+            if(e.keyCode == 70 && document.getElementById("obj2").style.top >= "450px" && document.getElementById("obj2").style.top < "520px"){
+                score += 1;
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("obj2").style.display = "none";
+            }
+            
+            if(e.keyCode == 74 && document.getElementById("obj3").style.top >= "450px" && document.getElementById("obj3").style.top < "520px"){
+                score += 1;
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("obj3").style.display = "none";
+            }
+            if(e.keyCode == 75 && document.getElementById("obj4").style.top >= "450px" && document.getElementById("obj4").style.top < "520px"){
+                score += 1;
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("obj4").style.display = "none";
+            }
+        }
+    
+       
+   </script>
+    
+    <style>
+        #obj1, #obj2, #obj3, #obj4 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 242);
+            position: absolute;
+            top: 8;
+            left: 8;
+            display: none;
+        }
+             
+    </style>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="obj1"></div>
+    <div id="obj2" style="left: 150px"></div>
+    <div id="obj3" style="left: 300px"></div>
+    <div id="obj4" style="left: 450px"></div>
+    <!-- 開始按鈕 -->
+    <button id="start" onclick="drop()">開始</button>
+    <button id="stop" onclick="stop()">結束</button>
+    <!-- 在距離頂端600px處畫一條線 -->
+    <div style="border: 3px solid rgb(235, 249, 122); width: 600px;  position: absolute; top: 600px"></div>
+    <!-- 在黑線下方20px處 出現分數 -->
+    <div style="position: absolute; top: 620px;color: aqua;font-size: 24px; margin: 0 auto">分數: <span id="score">0</span></div>
+
+    <p style=" color: aqua">
+        <br>
+        使用DFJK鍵遊玩，點擊開始按鈕遊戲開始，結束按鈕終止遊戲。
+        <br>
+    </p>
+    <p style="font-size: 12px; color: bisque;">
+        資訊傳播學系第22屆畢業專題-AI孿生
+        <br>李禹彤與AI共創Project05:製作網頁遊戲
+    </p>
+    <!-- 插入音樂來源 -->
+    <audio id="music" src="music.mp3"></audio>
+</body>
+</html>

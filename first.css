@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 12px;
+  background: linear-gradient(to right, #1b0ba5, #9c0583);
+}
+.header{
+    padding-top: 30px;
+    padding-bottom: 22px;
+}
+.header h1{
+    font-size: 28px;
+    color: white;
+    text-align: center;
+}
+
+.footer{
+    padding-top: 75px;
+    padding-bottom: 36px;
+    width: 312px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+}
+.footer a{
+    background-color: blueviolet;
+    display: inline-block;
+    width: 100px; ;
+    height: 25px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-right: 20px;
+}
+.footer a:hover{
+    background-color: black;
+}
+
+.box3 a{
+    text-decoration: none;
+    color: white;
+    line-height: 1;
+    font-size: 24px;   
+}
+table{
+  width:75% ;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+table thead{
+  background-color: aqua;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+
+table td {
+  border-bottom: 1.4px solid white;
+  /* height: 50px; */
+  font-size: 18px;
+  color: pink;
+  line-height: 1.4;
+  padding-left: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* .project{
+  text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+    line-height: 1;
+    font-size: 14px;
+} */
+.box3 .project{
+  
+  color: rgb(159, 217, 255);
+  font-size: 16px;
+  /* padding-left: 18px; */
+}
+
+.box3 a:hover{
+  color: aqua;
+}
+
+.box3 .project:hover{
+  color:white;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color:#fff ;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* margin-bottom: 4px; */
+}
+.head1{
+  display: flex;
+}
+.head1 h1{
+  font-size: 26px;
+  display: inline;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+.head2{
+  font-size: 14px;
+}
+.foot{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foot li{
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: white;
+}
+.foot a{
+  text-decoration: none;
+  color: white;
+}
+.foot a:hover{
+  color: blue;
+  font-weight: bold;
+}
+
+@media(max-width:500px){
+  .box3 a{
+      text-decoration: none;
+      color: white;
+      line-height: 1;
+      font-size: 20px;   
+  }
+  table{
+    width: 96% ;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+  table thead{
+    background-color: aqua;
+    text-align: center;
+    height: 12px;
+    line-height: 1.6;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  table td {
+    border-bottom: 1px solid white;
+    font-size: 16px;
+    color: pink;
+    line-height: 1.4;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 16px;
+  }
+
+  .box3 .project{
+    
+    color: rgb(214, 152, 161);
+    font-size: 14px;
+  }
+  
+  .box3 a:hover{
+    color: aqua;
+  }
+  
+  .box3 .project:hover{
+    color:white;
+  }
+}

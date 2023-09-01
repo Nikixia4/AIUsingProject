@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.container{
+  /* width: 75%; */
+  max-width: 700px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+}
+.box1 iframe{
+  border-radius: 8px;
+  border: 1px solid rgb(183, 183, 183);
+  box-shadow: 4px 4px 4px rgb(183, 183, 183);
+}
+.box2 iframe{
+  border-radius: 8px;
+  width: 100%;
+}
+.box2 .pdf{
+  border-radius: 8px;
+  border: 1px solid rgb(183, 183, 183);
+  margin-bottom: 16px;
+}
+h1{
+  font-size: 28px;
+  line-height: 1.5;
+}
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 18px;
+  line-height: 2;
+  text-indent: 8px;
+  border-left: 8px solid black ;
+}
+.header{
+  padding-top: 6px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid black;
+  margin-bottom: 16px;
+}
+.box1 iframe, .box2 img{
+  margin-top: 14px;
+  margin-bottom: 28px;
+}
+.box3 a{
+  font-size: 14;
+  color: rgb(115, 115, 115);
+  display: inline-block;
+  margin: 8px;
+  font-weight: bold;
+}
+.footer{
+  padding-top: 40px;
+  padding-bottom: 36px;
+  width: 312px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer a{
+  background-color: blueviolet;
+  display: inline-block;
+  width: 100px; ;
+  height: 25px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+.footer a:hover{
+  background-color: black;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: black; */
+  background: linear-gradient(to right, #1b0ba5, #9c0583);
+  color:#fff ;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 4px;
+}
+.head1{
+  display: flex;
+}
+.head img{
+  margin-top: 2px;
+  width: 40px;
+  height: 40px;
+}
+.head1 h1{
+  font-size: 26px;
+  display: inline;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+.head2{
+  font-size: 14px;
+}
+.foot{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foot li{
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: white;
+}
+.foot a{
+  text-decoration: none;
+  color: white;
+}
+.foot a:hover{
+  color: blue;
+  font-weight: bold;
+}
+@media(max-width:414px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+  } 
+}

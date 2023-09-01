@@ -154,6 +154,11 @@ table td {
 .head1{
   display: flex;
 }
+.head img{
+  margin-top: 2px;
+  width: 40px;
+  height: 40px;
+}
 .head1 h1{
   font-size: 26px;
   display: inline;
